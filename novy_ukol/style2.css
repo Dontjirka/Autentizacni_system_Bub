@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  }
+  .container{
+    max-width: 500px;
+    width: 100%;
+    background-color:#fff ;
+    padding: 25px 25px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    position:absolute;
+  }
+  
+  .container .title{
+    font-size: 35px;
+    font-weight:500;
+    position:relative;
+    align-items: center;
+    padding: 15px 15px;
+  }
+
+  .container .title::before {
+    content: "";
+    position: absolute;
+    left: 20;
+    bottom: 18px;
+    height: 4px;
+    width: 38px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  }
+  
+  form .user-details .input-box2 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2px;
+    width: calc(100% / 2 - 150px);
+  }
+ 
+  .user-details .input-box2 input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 5px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    top:50px;
+    left:150px;
+    position: relative;
+  }
+
+  .user-details .input-box2 input:focus,
+  .user-details .input-box2 input:valid{
+    border-color: #9b59b6;
+  }
+  
+  form .button2{
+    height: 1px;
+    margin: 5px 0;
+  }
+
+  form .button2 input{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  }
+
+   form .button2 input:hover{
+    /* transform: scale(0.99); */
+    background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+    }
+   @media(max-width: 584px){
+   .container{
+    max-width: 100%;
+  }
+    } 
