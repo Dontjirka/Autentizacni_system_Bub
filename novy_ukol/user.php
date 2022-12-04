@@ -1,7 +1,6 @@
 <?php
 ob_start();
 session_start();
-session_destroy();
 ?>
 <!DOCTYPE html>
 
@@ -33,6 +32,15 @@ session_destroy();
     if (!$_SESSION){
         header("Location: login.php");
         exit;
+    }
+
+    if ($_SESSION) {
+        #Logout
+        if (array_key_exists('buttonLogout',$_POST)) {
+            header("Location: login.php");
+            exit;
+            session_destroy();
+        }
     }
 
     if(isset($_POST['email'])){
@@ -73,11 +81,7 @@ session_destroy();
         echo '<a href="https://github.com/bubilem/tvorba-webovych-aplikaci/blob/master/dokumenty/Tvorba-webovych-aplikaci-A-prednaska.pdf" target="_blank">Something really important</a>';
     }
 
-    #Logout
-    if (array_key_exists('buttonLogout',$_POST)) {
-        header("Location: login.php");
-        exit;
-    }
+
 ?>
    
 </body>
